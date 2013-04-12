@@ -39,7 +39,7 @@ class Frame
     public function getFile($shortened = false)
     {
         $file = !empty($this->frame['file']) ? $this->frame['file'] : null;
-	$file = preg_replace("/\((.*)\)(.*)/", "", $file);
+        $file = preg_replace("/\((.*)\)(.*)/", "", $file);
         if ($shortened && is_string($file)) {
             // Replace the part of the path that all frames have in common, and add 'soft hyphens' for smoother line-breaks.
             $dirname = dirname(dirname(dirname(dirname(dirname(dirname(__DIR__))))));
